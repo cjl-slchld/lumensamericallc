@@ -1185,7 +1185,7 @@
 <script>
     // Transparent → white nav on scroll
     const nav = document.getElementById('mainNav');
-    window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); }, { passive: true });
+    if (nav) window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); }, { passive: true });
 
     // Highlight active sub-nav pill on scroll
     const sections = document.querySelectorAll('.program-section');
