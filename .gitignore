@@ -1,0 +1,21 @@
+# Development working files
+.tmp/
+node_modules/
+.env
+*.local
+
+# Python
+__pycache__/
+*.pyc
+.agent/memory/working/
+
+# Screenshots and review images
+*.png
+!docs/**/*.png
+!certificate_pseg_2023.png
+!logo.png.png
+!logo-light.png.png
+
+# OS
+.DS_Store
+Thumbs.db

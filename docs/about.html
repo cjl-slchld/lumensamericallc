@@ -1,0 +1,873 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lumens America — New Jersey's most trusted full-service energy partner. PSE&G Certified Trade Ally with 10+ years. Statewide NJ coverage — all 21 counties. LED lighting, HVAC, and solar upgrades.">
+    <title>About Us — Lumens America</title>
+    <meta property="og:title" content="About Us — Lumens America">
+    <meta property="og:description" content="New Jersey's most trusted full-service energy partner. PSE&amp;G Certified Trade Ally with 10+ years. Statewide NJ coverage — all 21 counties. LED lighting, HVAC, and solar upgrades.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --navy: #002B5C;
+            --navy-dark: #0D1B2A;
+            --primary: #1565C0;
+            --primary-dark: #0D47A1;
+            --amber: #C9973A;
+            --amber-bg: rgba(201,151,58,0.10);
+            --off-white: #F5F2ED;
+            --warm-grey: #E4E0D8;
+            --body-text: #3D4A5C;
+            --muted: #6B7888;
+            --display: "Fraunces", Georgia, serif;
+            --sans: "DM Sans", -apple-system, sans-serif;
+            --r: 8px;
+            --rlg: 14px;
+        }
+
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--sans); background: #fff; color: var(--body-text); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+
+        /* ── SCROLL REVEAL ── */
+        .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.65s cubic-bezier(0.16,1,0.3,1), transform 0.65s cubic-bezier(0.16,1,0.3,1); }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+        @media (prefers-reduced-motion: reduce) { .reveal { transition: none; } }
+
+        /* ── HAMBURGER ── */
+        .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; z-index: 300; }
+        .hamburger span { display: block; width: 24px; height: 2px; background: var(--navy); border-radius: 2px; transition: all 0.3s ease; }
+        .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        .hamburger.open span:nth-child(2) { opacity: 0; }
+        .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+        /* ── MOBILE MENU ── */
+        .mobile-menu { position: fixed; inset: 0; background: var(--navy-dark); z-index: 190; display: none; flex-direction: column; align-items: center; justify-content: center; gap: 6px; }
+        .mobile-menu.open { display: flex; }
+        .mobile-menu a { font-family: var(--display); font-size: clamp(22px,5vw,34px); font-weight: 700; color: rgba(255,255,255,0.82); text-decoration: none; padding: 10px 32px; transition: color 0.2s; font-variation-settings: "opsz" 48; }
+        .mobile-menu a:hover { color: var(--amber); }
+        .mobile-menu .m-cta { margin-top: 20px; background: var(--amber); color: var(--navy-dark) !important; border-radius: 8px; padding: 14px 40px !important; font-family: var(--sans) !important; font-size: 15px !important; font-weight: 700 !important; }
+
+        /* ── UTILITY BAR ── */
+        .utility-bar {
+            background: var(--navy);
+            padding: 8px 40px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 28px;
+        }
+        .utility-bar a {
+            color: rgba(255,255,255,0.82);
+            text-decoration: none;
+            font-size: 11.5px;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: color 0.2s;
+        }
+        .utility-bar a:hover { color: #fff; }
+        .utility-bar .icon { font-size: 13px; }
+
+        /* ── MAIN NAV ── */
+        .main-nav {
+            background: var(--navy-dark);
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 200;
+            height: 70px;
+            transition: background 0.35s, box-shadow 0.35s;
+        }
+        .main-nav.scrolled { background: rgba(255,255,255,0.97); backdrop-filter: blur(12px); box-shadow: 0 1px 0 rgba(0,43,92,0.09), 0 4px 20px rgba(0,43,92,0.07); }
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+        .nav-logo-icon {
+            width: 36px; height: 36px;
+            background: var(--primary);
+            color: #fff;
+            border-radius: var(--r);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: 900;
+        }
+        .nav-logo-text {
+            font-family: var(--display);
+            font-size: 17px;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            font-variation-settings: "opsz" 24;
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            list-style: none;
+        }
+        .nav-links a {
+            color: var(--navy);
+            text-decoration: none;
+            font-size: 13.5px;
+            font-weight: 600;
+            padding: 8px 14px;
+            border-radius: 6px;
+            transition: background 0.2s, color 0.2s;
+        }
+        .nav-links a:hover { background: var(--off-white); color: var(--primary); }
+        .nav-links a.active { color: var(--primary); }
+        .nav-cta {
+            background: var(--amber) !important;
+            color: var(--navy-dark) !important;
+            padding: 10px 20px !important;
+            border-radius: 6px !important;
+            font-weight: 700 !important;
+        }
+        .nav-cta:hover { background: #b8852e !important; }
+        .nav-logo-text { font-family: var(--display); font-size: 17px; font-weight: 700; letter-spacing: -0.01em; color: #fff; font-variation-settings: "opsz" 24; transition: color 0.35s; }
+        .main-nav.scrolled .nav-logo-text { color: var(--navy); }
+        .footer-logo-text { font-family: var(--display); font-size: 19px; font-weight: 700; color: #fff; margin-bottom: 16px; display: block; font-variation-settings: "opsz" 24; letter-spacing: -0.01em; }
+        .footer-logo-img { width: 180px; height: auto; display: block; margin-bottom: 20px; border-radius: 4px; }
+        .main-nav:not(.scrolled) .nav-links a { color: rgba(255,255,255,0.78); }
+        .main-nav:not(.scrolled) .nav-links a:hover { color: #fff; background: rgba(255,255,255,0.09); }
+        .main-nav:not(.scrolled) .nav-cta { background: var(--amber) !important; color: var(--navy-dark) !important; }
+        .main-nav:not(.scrolled) .hamburger span { background: #fff; }
+        .main-nav.scrolled .nav-logo-text { color: var(--navy); }
+        .main-nav.scrolled .nav-logo-icon { background: var(--primary); color: #fff; }
+        .main-nav.scrolled .nav-links a { color: var(--navy); }
+        .main-nav.scrolled .hamburger span { background: var(--navy); }
+
+        /* ── PAGE HERO ── */
+        .page-hero {
+            background: linear-gradient(105deg, #001e42 0%, #003076 50%, #001530 100%);
+            padding: 80px 64px 68px;
+            position: relative;
+            overflow: hidden;
+        }
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            left: -80px; top: -80px;
+            width: 400px; height: 400px;
+            background: radial-gradient(circle, rgba(21,101,192,0.2) 0%, transparent 65%);
+        }
+        .page-hero::after {
+            content: '';
+            position: absolute;
+            right: 5%; top: 20%;
+            width: 280px; height: 280px;
+            background: radial-gradient(circle, rgba(21,101,192,0.12) 0%, transparent 65%);
+        }
+        .breadcrumb {
+            font-size: 11.5px;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            position: relative;
+        }
+        .breadcrumb a { color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s; }
+        .breadcrumb a:hover { color: #fff; }
+        .breadcrumb span { color: rgba(255,255,255,0.3); }
+        .page-hero-eyebrow {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--amber);
+            margin-bottom: 14px;
+            display: block;
+            position: relative;
+        }
+        .page-hero h1 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 72;
+            font-size: clamp(28px, 4vw, 54px);
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.08;
+            letter-spacing: -0.02em;
+            margin-bottom: 18px;
+            position: relative;
+            max-width: 760px;
+        }
+        .page-hero p {
+            font-size: 16.5px;
+            line-height: 1.75;
+            color: rgba(255,255,255,0.7);
+            max-width: 600px;
+            position: relative;
+        }
+
+        /* ── SECTIONS ── */
+        .section { padding: 80px 64px; }
+        .section-alt { background: var(--off-white); }
+        .section-navy {
+            background: linear-gradient(105deg, #001e42 0%, #003076 55%, #001530 100%);
+            padding: 80px 64px;
+        }
+        .section-eyebrow {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--amber);
+            margin-bottom: 12px;
+            display: block;
+        }
+        .section-eyebrow-light {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 12px;
+            display: block;
+        }
+        .section-heading {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 72;
+            font-size: clamp(26px, 3vw, 44px);
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            color: var(--navy);
+            margin-bottom: 14px;
+        }
+        .section-heading-light {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 72;
+            font-size: clamp(26px, 3vw, 44px);
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            color: #fff;
+            margin-bottom: 14px;
+        }
+
+        /* ── OUR STORY ── */
+        .story-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 72px;
+            align-items: center;
+            margin-top: 44px;
+        }
+        .story-copy p {
+            font-size: 15.5px;
+            line-height: 1.8;
+            color: var(--muted);
+            margin-bottom: 20px;
+        }
+        .story-copy p:last-child { margin-bottom: 0; }
+        .story-img {
+            border-radius: var(--rlg);
+            overflow: hidden;
+            position: relative;
+        }
+        .story-img img {
+            width: 100%;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+            display: block;
+        }
+        .story-img-badge {
+            position: absolute;
+            bottom: 20px; left: 20px;
+            background: rgba(13,27,42,0.92);
+            backdrop-filter: blur(6px);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 10px;
+            padding: 14px 18px;
+            color: #fff;
+        }
+        .story-img-badge .num {
+            font-family: var(--display);
+            font-size: 28px;
+            font-weight: 900;
+            line-height: 1;
+            color: #fff;
+            font-variation-settings: "opsz" 48;
+        }
+        .story-img-badge .lbl {
+            font-size: 11px;
+            color: rgba(255,255,255,0.65);
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            margin-top: 4px;
+        }
+
+        /* ── STATS BAR ── */
+        .stats-bar {
+            background: var(--navy);
+            padding: 40px 64px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            text-align: center;
+        }
+        .stat-item .num {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 48;
+            font-size: 36px;
+            font-weight: 900;
+            color: #fff;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+        .stat-item .lbl { font-size: 11.5px; font-weight: 600; color: rgba(255,255,255,0.8); letter-spacing: 0.06em; text-transform: uppercase; }
+
+        /* ── TRADE ALLY SECTION ── */
+        .trade-ally-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 56px;
+            align-items: center;
+            margin-top: 44px;
+        }
+        .trade-ally-copy p {
+            font-size: 15.5px;
+            line-height: 1.8;
+            color: rgba(255,255,255,0.72);
+            margin-bottom: 18px;
+        }
+        .trade-ally-points {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 8px;
+        }
+        .trade-ally-point {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 16px 20px;
+        }
+        .trade-ally-point-icon {
+            font-size: 18px;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+        .trade-ally-point h5 {
+            font-size: 14px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 4px;
+        }
+        .trade-ally-point p {
+            font-size: 13px !important;
+            line-height: 1.6 !important;
+            color: rgba(255,255,255,0.65) !important;
+            margin-bottom: 0 !important;
+        }
+        .credential-card {
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: var(--rlg);
+            padding: 32px;
+            text-align: center;
+        }
+        .credential-card .badge-icon {
+            font-size: 52px;
+            margin-bottom: 16px;
+            display: block;
+        }
+        .credential-card h4 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 48;
+            font-size: 18px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 8px;
+            line-height: 1.25;
+        }
+        .credential-card p {
+            font-size: 13.5px;
+            line-height: 1.65;
+            color: rgba(255,255,255,0.65);
+        }
+        .credential-card .cert-line {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(201,151,58,0.15);
+            border: 1px solid rgba(201,151,58,0.4);
+            color: var(--amber);
+            font-size: 11px;
+            font-weight: 700;
+            padding: 5px 14px;
+            border-radius: 20px;
+            margin-top: 16px;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        /* ── AWARD SECTION ── */
+        .award-section {
+            background: linear-gradient(105deg, #001e42 0%, #003076 45%, #001530 100%);
+            padding: 80px 64px;
+            position: relative;
+            overflow: hidden;
+        }
+        .award-section::before {
+            content: '';
+            position: absolute;
+            left: -60px; top: -60px;
+            width: 340px; height: 340px;
+            background: radial-gradient(circle, rgba(21,101,192,0.18) 0%, transparent 65%);
+        }
+        .award-layout {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            gap: 56px;
+            align-items: center;
+            max-width: 1080px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .award-badge-col { text-align: center; }
+        .award-trophy { font-size: 60px; line-height: 1; margin-bottom: 12px; }
+        .award-pill {
+            display: inline-block;
+            background: rgba(255,180,0,0.15);
+            border: 1px solid rgba(255,180,0,0.4);
+            color: #ffd25e;
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+        .award-copy p.eyebrow {
+            font-size: 10.5px;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.45);
+            margin-bottom: 10px;
+        }
+        .award-copy h2 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 72;
+            font-size: clamp(20px, 2.6vw, 34px);
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            color: #fff;
+            margin-bottom: 14px;
+        }
+        .award-copy p.desc {
+            font-size: 14.5px;
+            line-height: 1.75;
+            color: rgba(255,255,255,0.68);
+            max-width: 560px;
+        }
+        .award-copy p.desc strong { color: #fff; }
+        .award-cert img {
+            width: 180px;
+            border-radius: 10px;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255,255,255,0.1);
+            display: block;
+        }
+
+        /* ── VALUES ── */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 48px;
+        }
+        .value-card {
+            background: #fff;
+            border-radius: var(--rlg);
+            border: 1px solid var(--warm-grey);
+            padding: 36px 32px;
+        }
+        .value-icon {
+            font-size: 34px;
+            margin-bottom: 16px;
+            display: block;
+        }
+        .value-card h3 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 48;
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 10px;
+        }
+        .value-card p {
+            font-size: 14px;
+            line-height: 1.7;
+            color: var(--muted);
+        }
+
+        /* ── CTA BAND ── */
+        .cta-band {
+            background: var(--navy-dark);
+            padding: 72px 64px;
+            text-align: center;
+        }
+        .cta-band h2 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 72;
+            font-size: clamp(24px, 3vw, 42px);
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            margin-bottom: 12px;
+        }
+        .cta-band p {
+            font-size: 16px;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 36px;
+            line-height: 1.7;
+        }
+        .cta-buttons { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+        .btn-amber {
+            background: var(--amber);
+            color: var(--navy-dark);
+            padding: 14px 30px;
+            border-radius: var(--r);
+            font-size: 13.5px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .btn-amber:hover { background: #b8852e; }
+        .btn-outline-white {
+            background: transparent;
+            color: #fff;
+            padding: 14px 30px;
+            border-radius: var(--r);
+            border: 2px solid rgba(255,255,255,0.45);
+            font-size: 13.5px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .btn-outline-white:hover { border-color: #fff; background: rgba(255,255,255,0.1); }
+
+        /* ── FOOTER ── */
+        .footer-top {
+            background: var(--navy-dark);
+            padding: 56px 64px 40px;
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr 1fr;
+            gap: 48px;
+        }
+        .footer-brand .logo-text {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 24;
+            font-size: 18px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 12px;
+            display: block;
+        }
+        .footer-brand p { font-size: 13px; line-height: 1.7; color: rgba(255,255,255,0.6); margin-bottom: 20px; }
+        .footer-brand .contact-info { font-size: 13px; color: rgba(255,255,255,0.75); line-height: 1.9; }
+        .footer-brand .contact-info a { color: rgba(255,255,255,0.75); text-decoration: none; }
+        .footer-brand .contact-info a:hover { color: #fff; }
+        .footer-col h4 { font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 16px; }
+        .footer-col ul { list-style: none; }
+        .footer-col ul li { margin-bottom: 10px; }
+        .footer-col ul a { font-size: 13.5px; color: rgba(255,255,255,0.72); text-decoration: none; transition: color 0.2s; }
+        .footer-col ul a:hover { color: #fff; }
+        .footer-bottom {
+            background: var(--navy-dark);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding: 18px 64px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .footer-bottom p { font-size: 12px; color: rgba(255,255,255,0.4); }
+        .footer-bottom a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 12px; }
+        .footer-bottom a:hover { color: rgba(255,255,255,0.8); }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 1024px) {
+            .story-grid, .trade-ally-grid { grid-template-columns: 1fr; gap: 36px; }
+            .award-layout { grid-template-columns: 1fr; text-align: center; gap: 28px; }
+            .award-cert { display: none; }
+            .values-grid { grid-template-columns: 1fr 1fr; }
+            .stats-bar { grid-template-columns: repeat(2, 1fr); }
+            .footer-top { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hamburger { display: flex; }
+            .section, .section-navy, .award-section, .cta-band { padding: 56px 24px; }
+            .page-hero { padding: 56px 24px 48px; }
+            .main-nav { padding: 0 24px; }
+            .utility-bar { display: none; }
+            .values-grid { grid-template-columns: 1fr; }
+            .stats-bar { padding: 32px 24px; }
+            .footer-top { grid-template-columns: 1fr; padding: 40px 24px; }
+            .footer-bottom { padding: 18px 24px; flex-direction: column; gap: 12px; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+    <a href="index.html#services" onclick="closeMobile()">Services</a>
+    <a href="index.html#markets" onclick="closeMobile()">Markets</a>
+    <a href="programs.html" onclick="closeMobile()">Programs</a>
+    <a href="about.html" onclick="closeMobile()">About</a>
+    <a href="faq.html" onclick="closeMobile()">FAQ</a>
+    <a href="index.html#contact-form" class="m-cta" onclick="closeMobile()">Free Energy Audit</a>
+</div>
+
+<!-- UTILITY BAR -->
+<div class="utility-bar">
+    <a href="tel:+12016600121">(201) 660-0121</a>
+    <a href="mailto:info@lumensamericallc.com">info@lumensamericallc.com</a>
+    <a href="#">New Jersey &mdash; Statewide</a>
+</div>
+
+<!-- MAIN NAV -->
+<nav class="main-nav" id="mainNav">
+    <a href="index.html" class="nav-logo">
+        <span class="nav-logo-text">Lumens America</span>
+    </a>
+    <ul class="nav-links">
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#markets">Markets</a></li>
+        <li><a href="index.html#service-area">Service Area</a></li>
+        <li><a href="index.html#why">Why Us</a></li>
+        <li><a href="programs.html">Programs</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="index.html#contact-form" class="nav-cta">Free Energy Audit</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+    <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>›</span>
+        <span style="color:rgba(255,255,255,0.75);">About Us</span>
+    </div>
+    <span class="page-hero-eyebrow">Our Story</span>
+    <h1>10 Years of Precision.<br>One Standard.</h1>
+    <p>We started as LED specialists and grew into New Jersey's most trusted full-service energy partner — because we never cut corners, and we never stopped learning.</p>
+</div>
+
+<!-- OUR STORY -->
+<section class="section">
+    <span class="section-eyebrow reveal">Our Story</span>
+    <h2 class="section-heading reveal">Built in New Jersey.<br>For New Jersey.</h2>
+    <div class="story-grid">
+        <div class="story-copy reveal">
+            <p>Lumens America started with a simple belief: energy upgrades should be straightforward for the businesses and property owners who need them most. We launched as LED lighting specialists serving commercial customers across central and northern New Jersey — and quickly found that the companies doing the most good for their clients were the ones who knew the PSE&amp;G incentive landscape inside and out.</p>
+            <p>We became a PSE&amp;G Certified Trade Ally from the beginning — not as a credential to advertise, but as a commitment to doing the work the right way. That certification meant we could access programs most other contractors couldn't offer, and structure projects so customers paid as little out of pocket as possible.</p>
+            <p>Over time, customer demand pulled us into HVAC and solar. The scope grew, but the approach didn't change: assess honestly, design to code, install cleanly, and handle the rebate paperwork so you don't have to. Today we serve all of New Jersey — all 21 counties — from single-location retail businesses to hospital systems and multifamily portfolios.</p>
+            <p>What hasn't changed is the team. The people who built Lumens America are still here — still showing up on job sites, still navigating PSE&amp;G applications, still following up when something isn't right. That continuity is rare in this industry. We think it matters.</p>
+        </div>
+        <div class="story-img reveal">
+            <img src="website%20images/story%20team%20image.png" alt="Lumens America crew inspecting electrical panel in warehouse">
+            <div class="story-img-badge">
+                <div class="num">10+</div>
+                <div class="lbl">Years in NJ</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+    <div class="stat-item">
+        <div class="num">10+</div>
+        <div class="lbl">Years in Business</div>
+    </div>
+    <div class="stat-item">
+        <div class="num">All 21</div>
+        <div class="lbl">NJ Counties Covered</div>
+    </div>
+    <div class="stat-item">
+        <div class="num" style="display:flex;align-items:center;justify-content:center;gap:6px;"><span style="font-size:0.65em;color:var(--amber);">&#9733;</span> 2023</div>
+        <div class="lbl">Fast Track Sprinter Award</div>
+    </div>
+</div>
+
+<!-- PSE&G TRADE ALLY SECTION -->
+<div class="section-navy">
+    <span class="section-eyebrow-light reveal">Why It Matters</span>
+    <h2 class="section-heading-light reveal">PSE&amp;G Certified Trade Ally</h2>
+    <div class="trade-ally-grid">
+        <div class="trade-ally-copy">
+            <p>PSE&amp;G's Trade Ally Network is the gateway to NJ's most powerful energy incentive programs. Only contractors who meet PSE&amp;G's standards for technical competency, financial stability, and compliance can become certified — and only certified contractors can submit projects through certain program tracks.</p>
+            <p>For customers, working with a Trade Ally means the contractor already knows the programs, understands the paperwork, and has a direct relationship with the utility. That translates to faster approvals, fewer surprises, and more money back in your pocket.</p>
+            <div class="trade-ally-points">
+                <div class="trade-ally-point reveal">
+                    <div class="trade-ally-point-icon" style="font-family:var(--display);font-size:13px;font-weight:700;color:var(--amber);font-variation-settings:'opsz' 18;">01</div>
+                    <div>
+                        <h5>Access to All 5 PSE&amp;G Programs</h5>
+                        <p>Prescriptive, Direct Install, Engineered Solutions, Multifamily, and OBR financing — most contractors can only access one or two.</p>
+                    </div>
+                </div>
+                <div class="trade-ally-point reveal">
+                    <div class="trade-ally-point-icon" style="font-family:var(--display);font-size:13px;font-weight:700;color:var(--amber);font-variation-settings:'opsz' 18;">02</div>
+                    <div>
+                        <h5>Faster Application Processing</h5>
+                        <p>Our established relationship with PSE&amp;G means applications move through review faster and with fewer revision cycles.</p>
+                    </div>
+                </div>
+                <div class="trade-ally-point reveal">
+                    <div class="trade-ally-point-icon" style="font-family:var(--display);font-size:13px;font-weight:700;color:var(--amber);font-variation-settings:'opsz' 18;">03</div>
+                    <div>
+                        <h5>We Handle All the Paperwork</h5>
+                        <p>Applications, pre-approvals, M&amp;V documentation, and post-installation inspections — all managed by Lumens America on your behalf.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="credential-card reveal">
+            <span class="badge-icon" style="font-size:32px;font-family:var(--display);font-weight:700;color:var(--amber);font-variation-settings:'opsz' 48;">&#10003;</span>
+            <h4>PSE&amp;G Certified<br>Trade Ally</h4>
+            <p>Independently verified by PSE&amp;G to meet technical, financial, and compliance standards required to administer all commercial and residential incentive programs.</p>
+            <span class="cert-line">✓ Active Certification</span>
+            <p style="font-size:12px;color:rgba(255,255,255,0.45);margin-top:16px;">Certification maintained continuously since our founding. Renewed annually through PSE&amp;G's Trade Ally compliance review.</p>
+        </div>
+    </div>
+</div>
+
+<!-- AWARD SECTION -->
+<div class="award-section" id="award">
+    <div class="award-layout">
+        <div class="award-badge-col reveal">
+            <div class="award-trophy" style="font-size:50px;line-height:1;font-family:var(--display);font-weight:700;color:var(--amber);font-variation-settings:'opsz' 48;">&#9733;</div>
+            <div class="award-pill">2023 Award Winner</div>
+        </div>
+        <div class="award-copy reveal">
+            <p class="eyebrow">PSE&amp;G Recognition</p>
+            <h2>Fast Track Sprinter — Most kWh Savings in Lighting</h2>
+            <p class="desc">In March 2023, PSE&amp;G awarded Lumens America the <strong>Fast Track Sprinter</strong> designation — given to the single Trade Ally that delivered the most Fast Track kWh savings in lighting across all PSE&amp;G partners statewide. This isn't a participation award. It's a performance record that reflects the volume, quality, and speed of the work our team delivered for NJ businesses that year.</p>
+        </div>
+        <div class="award-cert">
+            <img src="certificate_pseg_2023.png" alt="PSE&G Fast Track Sprinter Certificate 2023" onerror="this.style.display='none'">
+        </div>
+    </div>
+</div>
+
+<!-- VALUES -->
+<section class="section-alt" style="padding:80px 64px;">
+    <span class="section-eyebrow reveal">What We Stand For</span>
+    <h2 class="section-heading reveal">Three things we don't compromise on.</h2>
+    <div class="values-grid">
+        <div class="value-card reveal">
+            <span class="value-icon" style="font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--amber);">I.</span>
+            <h3>Do It Right</h3>
+            <p>Every installation we complete is inspected, documented, and backed by our workmanship warranty. We don't rush jobs to hit volume targets, and we don't sub out quality-critical work to crews we haven't vetted. If something isn't right, we come back and fix it — no invoices, no arguments.</p>
+        </div>
+        <div class="value-card reveal">
+            <span class="value-icon" style="font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--amber);">II.</span>
+            <h3>Full Transparency</h3>
+            <p>You'll know exactly what your upgrade will cost, what incentives will offset that cost, and what the monthly OBR repayment looks like before we start. We don't quote low and adjust later. If a project doesn't pencil out for the customer, we'll tell you — even if it means walking away from a job.</p>
+        </div>
+        <div class="value-card reveal">
+            <span class="value-icon" style="font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--amber);">III.</span>
+            <h3>NJ Is Home</h3>
+            <p>We're not a national contractor with a regional sales office. Our leadership, our crews, and our families are in New Jersey. The buildings we upgrade are in the communities where our kids go to school. That's not a marketing line — it's the reason we care about the work we put our name on.</p>
+        </div>
+    </div>
+</section>
+
+<!-- CTA BAND -->
+<div class="cta-band">
+    <h2 class="reveal">Work with the team PSE&amp;G recognized as #1.</h2>
+    <p>A free energy assessment takes 45 minutes and shows you exactly what programs your facility qualifies for — and what it would cost you, out of pocket, to get started.</p>
+    <div class="cta-buttons">
+        <a href="index.html#contact-form" class="btn-amber">Get a Free Energy Audit →</a>
+        <a href="programs.html" class="btn-outline-white">Explore PSE&amp;G Programs</a>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer-top" id="contact">
+    <div class="footer-brand">
+        <img src="logo.png.png" alt="Lumens America" class="footer-logo-img">
+        <p>New Jersey's trusted, full-service energy partner for LED lighting, HVAC, and solar upgrades. PSE&amp;G Certified Trade Ally since day one.</p>
+        <div class="contact-info">
+            <a href="tel:+12016600121">(201) 660-0121</a><br>
+            <a href="mailto:info@lumensamericallc.com">info@lumensamericallc.com</a><br>
+            New Jersey — Statewide Coverage
+        </div>
+    </div>
+    <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+            <li><a href="index.html#services">LED Lighting</a></li>
+            <li><a href="index.html#services">LED Retrofit</a></li>
+            <li><a href="index.html#services">HVAC Upgrades</a></li>
+            <li><a href="index.html#services">Solar Installation</a></li>
+            <li><a href="index.html#contact-form">Energy Audit</a></li>
+        </ul>
+    </div>
+    <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="programs.html">PSE&amp;G Programs</a></li>
+            <li><a href="about.html#award">Awards &amp; Recognition</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="index.html#contact-form">Contact</a></li>
+        </ul>
+    </div>
+    <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+            <li><a href="programs.html">PSE&amp;G Rebate Programs</a></li>
+            <li><a href="programs.html#obr">OBR Financing</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="index.html#contact-form">Free Energy Audit</a></li>
+        </ul>
+    </div>
+</div>
+<div class="footer-bottom">
+    <p>&copy; 2026 Lumens America LLC. All rights reserved.</p>
+    <div style="display:flex;gap:20px;"><a href="mailto:info@lumensamericallc.com">Contact</a></div>
+</div>
+
+<script>
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); }, { passive: true });
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    function closeMobile() { hamburger.classList.remove('open'); mobileMenu.classList.remove('open'); document.body.style.overflow=''; }
+    hamburger.addEventListener('click', () => { hamburger.classList.toggle('open'); mobileMenu.classList.toggle('open'); document.body.style.overflow = mobileMenu.classList.contains('open')?'hidden':''; });
+    const revealObs = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');revealObs.unobserve(e.target);} }); }, {threshold:0.12});
+    document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+</script>
+
+</body>
+</html>

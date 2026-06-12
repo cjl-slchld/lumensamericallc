@@ -1,0 +1,1218 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PSE&G Programs — Lumens America</title>
+    <meta property="og:title" content="PSE&amp;G Programs — Lumens America">
+    <meta property="og:description" content="Full guide to PSE&amp;G's Direct Install, Prescriptive, Engineered Solutions, and Multifamily rebate programs. NJ's trusted PSE&amp;G Certified Trade Ally handles every application.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --navy: #002B5C;
+            --navy-dark: #0D1B2A;
+            --primary: #1565C0;
+            --primary-dark: #0D47A1;
+            --amber: #C9973A;
+            --amber-bg: rgba(201,151,58,0.10);
+            --off-white: #F5F2ED;
+            --warm-grey: #E4E0D8;
+            --body-text: #3D4A5C;
+            --muted: #6B7888;
+            --display: "Fraunces", Georgia, serif;
+            --sans: "DM Sans", -apple-system, sans-serif;
+            --r: 8px;
+            --rlg: 14px;
+        }
+
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--sans); background: #fff; color: var(--body-text); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+
+        /* ── SCROLL REVEAL ── */
+        .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.65s cubic-bezier(0.16,1,0.3,1), transform 0.65s cubic-bezier(0.16,1,0.3,1); }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        /* ── MOBILE MENU ── */
+        .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; z-index: 300; }
+        .hamburger span { display: block; width: 24px; height: 2px; background: var(--navy); border-radius: 2px; transition: all 0.3s ease; }
+        .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        .hamburger.open span:nth-child(2) { opacity: 0; }
+        .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+        .mobile-menu { position: fixed; inset: 0; background: var(--navy-dark); z-index: 190; display: none; flex-direction: column; align-items: center; justify-content: center; gap: 6px; }
+        .mobile-menu.open { display: flex; }
+        .mobile-menu a { font-family: var(--display); font-size: clamp(22px,5vw,34px); font-weight: 700; color: rgba(255,255,255,0.82); text-decoration: none; padding: 10px 32px; transition: color 0.2s; font-variation-settings: "opsz" 48; }
+        .mobile-menu a:hover { color: var(--amber); }
+        .mobile-menu .m-cta { margin-top: 20px; background: var(--amber); color: var(--navy-dark) !important; border-radius: 8px; padding: 14px 40px !important; font-family: var(--sans) !important; font-size: 15px !important; font-weight: 700 !important; }
+
+        /* ── UTILITY BAR ── */
+        .utility-bar {
+            background: var(--navy);
+            padding: 8px 40px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 28px;
+        }
+        .utility-bar a {
+            color: rgba(255,255,255,0.82);
+            text-decoration: none;
+            font-size: 11.5px;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: color 0.2s;
+        }
+        .utility-bar a:hover { color: #fff; }
+        .utility-bar .icon { font-size: 13px; }
+
+        /* ── MAIN NAV ── */
+        .main-nav {
+            background: var(--navy-dark);
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 200;
+            height: 70px;
+            transition: background 0.35s, box-shadow 0.35s;
+        }
+        .main-nav.scrolled { background: rgba(255,255,255,0.97); backdrop-filter: blur(12px); box-shadow: 0 1px 0 rgba(0,43,92,0.09), 0 4px 20px rgba(0,43,92,0.07); }
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+        .nav-logo-icon {
+            width: 36px; height: 36px;
+            background: var(--primary);
+            color: #fff;
+            border-radius: var(--r);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: 900;
+        }
+        .nav-logo-text {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 72;
+            font-size: 17px;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            list-style: none;
+        }
+        .nav-links a {
+            color: var(--navy);
+            text-decoration: none;
+            font-size: 13.5px;
+            font-weight: 600;
+            padding: 8px 14px;
+            border-radius: 6px;
+            transition: background 0.2s, color 0.2s;
+        }
+        .nav-links a:hover { background: var(--off-white); color: var(--primary); }
+        .nav-links a.active { color: var(--amber); font-weight: 700; }
+        .nav-cta {
+            background: var(--amber) !important;
+            color: var(--navy-dark) !important;
+            padding: 10px 20px !important;
+            border-radius: 6px !important;
+            font-weight: 700 !important;
+        }
+        .nav-cta:hover { opacity: 0.9; }
+        .nav-logo-text { font-family: var(--display); font-size: 17px; font-weight: 700; letter-spacing: -0.01em; color: #fff; font-variation-settings: "opsz" 24; transition: color 0.35s; }
+        .main-nav.scrolled .nav-logo-text { color: var(--navy); }
+        .footer-logo-text { font-family: var(--display); font-size: 19px; font-weight: 700; color: #fff; margin-bottom: 16px; display: block; font-variation-settings: "opsz" 24; letter-spacing: -0.01em; }
+        .footer-logo-img { width: 180px; height: auto; display: block; margin-bottom: 20px; border-radius: 4px; }
+        .main-nav:not(.scrolled) .nav-links a { color: rgba(255,255,255,0.78); }
+        .main-nav:not(.scrolled) .nav-links a:hover { color: #fff; background: rgba(255,255,255,0.09); }
+        .main-nav:not(.scrolled) .nav-cta { background: var(--amber) !important; color: var(--navy-dark) !important; }
+        .main-nav:not(.scrolled) .hamburger span { background: #fff; }
+        .main-nav.scrolled .nav-logo-text { color: var(--navy); }
+        .main-nav.scrolled .nav-logo-icon { background: var(--primary); color: #fff; }
+        .main-nav.scrolled .nav-links a { color: var(--navy); }
+        .main-nav.scrolled .hamburger span { background: var(--navy); }
+
+        /* ── PAGE HERO ── */
+        .page-hero {
+            background: linear-gradient(105deg, #001020 0%, #002B5C 50%, #001020 100%);
+            padding: 72px 64px 60px;
+            position: relative;
+            overflow: hidden;
+        }
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            left: -80px; top: -80px;
+            width: 400px; height: 400px;
+            background: radial-gradient(circle, rgba(201,151,58,0.15) 0%, transparent 65%);
+            pointer-events: none;
+        }
+        .breadcrumb {
+            font-size: 11.5px;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .breadcrumb a { color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s; }
+        .breadcrumb a:hover { color: #fff; }
+        .breadcrumb span { color: rgba(255,255,255,0.3); }
+        .page-hero h1 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 72;
+            font-size: clamp(30px, 4vw, 52px);
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.08;
+            letter-spacing: -0.03em;
+            margin-bottom: 16px;
+            position: relative;
+        }
+        .page-hero p {
+            font-size: 16.5px;
+            line-height: 1.75;
+            color: rgba(255,255,255,0.7);
+            max-width: 640px;
+            position: relative;
+        }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: var(--amber);
+            font-size: 11px;
+            font-weight: 700;
+            padding: 5px 14px;
+            border-radius: 20px;
+            margin-bottom: 18px;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        /* ── STICKY PROGRAM SUB-NAV ── */
+        .sub-nav {
+            background: #fff;
+            border-bottom: 1px solid var(--warm-grey);
+            padding: 0 64px;
+            position: sticky;
+            top: 70px;
+            z-index: 150;
+            box-shadow: 0 2px 8px rgba(0,43,92,0.05);
+        }
+        .sub-nav-inner {
+            display: flex;
+            gap: 0;
+            overflow-x: auto;
+            scrollbar-width: none;
+        }
+        .sub-nav-inner::-webkit-scrollbar { display: none; }
+        .sub-nav-link {
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 18px 20px 16px;
+            white-space: nowrap;
+            border-bottom: 3px solid transparent;
+            transition: color 0.2s, border-color 0.2s;
+        }
+        .sub-nav-link:hover { color: var(--primary); border-bottom-color: var(--warm-grey); }
+        .sub-nav-link.active { color: var(--primary); border-bottom-color: var(--amber); }
+
+        /* ── SECTION BASICS ── */
+        .section { padding: 80px 64px; }
+        .section-alt { background: var(--off-white); }
+        .section-navy { background: linear-gradient(105deg, #060f1a 0%, var(--navy-dark) 55%, #060f1a 100%); }
+        .section-eyebrow {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--amber);
+            margin-bottom: 16px;
+            display: block;
+        }
+        .section-eyebrow-light {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 12px;
+            display: block;
+        }
+        .section-heading {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 72;
+            font-size: clamp(26px, 3vw, 42px);
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            color: var(--navy);
+            margin-bottom: 14px;
+        }
+        .section-heading-light {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 72;
+            font-size: clamp(26px, 3vw, 42px);
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            color: #fff;
+            margin-bottom: 14px;
+            max-width: 720px;
+        }
+        .section-sub {
+            font-size: 16px;
+            line-height: 1.75;
+            color: var(--muted);
+            max-width: 600px;
+        }
+        .section-sub-light {
+            font-size: 16px;
+            line-height: 1.75;
+            color: rgba(255,255,255,0.7);
+            max-width: 640px;
+        }
+
+        /* ── PROGRAM SECTIONS ── */
+        .program-section {
+            scroll-margin-top: 130px;
+            padding: 0 !important;
+        }
+        .prog-split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 620px;
+        }
+        .prog-split-img {
+            overflow: hidden;
+            height: 100%;
+        }
+        .prog-split-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+            display: block;
+        }
+        .prog-split-content {
+            padding: 64px 72px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .prog-split.img-right .prog-split-img { order: 2; }
+        .prog-split.img-right .prog-split-content { order: 1; }
+        .prog-split-title {
+            font-family: var(--display);
+            font-size: clamp(24px, 2.6vw, 36px);
+            font-weight: 700;
+            color: var(--navy);
+            line-height: 1.1;
+            letter-spacing: -0.025em;
+            margin-bottom: 20px;
+            font-variation-settings: "opsz" 48;
+        }
+
+        .program-who {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--amber-bg);
+            color: var(--navy);
+            font-size: 11.5px;
+            font-weight: 700;
+            padding: 5px 14px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            letter-spacing: 0.04em;
+        }
+
+        .program-desc {
+            font-size: 15.5px;
+            line-height: 1.78;
+            color: var(--muted);
+            margin-bottom: 24px;
+        }
+
+        .program-highlights {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 28px;
+        }
+        .highlight-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 14px;
+            line-height: 1.55;
+            color: var(--body-text);
+        }
+        .highlight-item::before {
+            content: '✓';
+            color: var(--amber);
+            font-weight: 700;
+            font-size: 13px;
+            margin-top: 1px;
+            flex-shrink: 0;
+        }
+
+        .program-details {
+            background: var(--navy);
+            border-radius: var(--rlg);
+            overflow: hidden;
+        }
+        .program-details-header {
+            background: var(--amber);
+            padding: 20px 28px;
+        }
+        .program-details-header h4 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 72;
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--navy-dark);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+        .program-details-body {
+            padding: 24px 28px 28px;
+        }
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+        .detail-row:last-child { border-bottom: none; }
+        .detail-label {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.45);
+            flex-shrink: 0;
+            min-width: 80px;
+        }
+        .detail-value {
+            font-size: 13.5px;
+            line-height: 1.55;
+            color: rgba(255,255,255,0.85);
+            text-align: left;
+        }
+
+        .steps-list {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin-top: 20px;
+        }
+        .step-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+        }
+        .step-num {
+            width: 28px; height: 28px;
+            background: var(--amber);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 800;
+            color: var(--navy-dark);
+            flex-shrink: 0;
+        }
+        .step-text {
+            font-size: 13.5px;
+            line-height: 1.6;
+            color: rgba(255,255,255,0.82);
+            padding-top: 3px;
+        }
+
+        /* ── EQUIPMENT TAGS ── */
+        .eq-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+        .eq-tag {
+            background: rgba(255,255,255,0.08);
+            color: rgba(255,255,255,0.75);
+            font-size: 11.5px;
+            font-weight: 600;
+            padding: 5px 12px;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.12);
+        }
+
+        /* ── OBR SECTION ── */
+        .obr-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: start;
+            margin-top: 48px;
+        }
+        .obr-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .obr-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.09);
+            border-radius: 10px;
+            padding: 16px 18px;
+        }
+        .obr-step-num {
+            width: 32px; height: 32px;
+            background: var(--amber);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            font-weight: 800;
+            color: var(--navy-dark);
+            flex-shrink: 0;
+        }
+        .obr-step-content h5 {
+            font-size: 13.5px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 4px;
+        }
+        .obr-step-content p {
+            font-size: 12.5px;
+            line-height: 1.55;
+            color: rgba(255,255,255,0.65);
+        }
+
+        .obr-faqs {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .obr-faq-item {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.09);
+            border-radius: 10px;
+            padding: 20px 22px;
+        }
+        .obr-faq-item h5 {
+            font-size: 14px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 8px;
+            line-height: 1.35;
+        }
+        .obr-faq-item p {
+            font-size: 13px;
+            line-height: 1.65;
+            color: rgba(255,255,255,0.68);
+        }
+        .obr-callout {
+            background: rgba(201,151,58,0.15);
+            border: 1px solid rgba(201,151,58,0.35);
+            border-radius: 12px;
+            padding: 24px 28px;
+            margin-top: 32px;
+        }
+        .obr-callout p {
+            font-size: 14.5px;
+            line-height: 1.7;
+            color: rgba(255,255,255,0.85);
+        }
+        .obr-callout strong { color: #fff; }
+
+        /* ── CTA BAND ── */
+        .cta-band {
+            background: var(--navy-dark);
+            padding: 72px 64px;
+            text-align: center;
+        }
+        .cta-band h2 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 72;
+            font-size: clamp(24px, 3vw, 42px);
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.1;
+            letter-spacing: -0.025em;
+            margin-bottom: 12px;
+        }
+        .cta-band p {
+            font-size: 16px;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 36px;
+            line-height: 1.7;
+        }
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .btn-white {
+            background: var(--amber);
+            color: var(--navy-dark);
+            padding: 14px 30px;
+            border-radius: var(--r);
+            font-size: 13.5px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .btn-white:hover { opacity: 0.9; }
+        .btn-outline-white {
+            background: transparent;
+            color: #fff;
+            padding: 14px 30px;
+            border-radius: var(--r);
+            border: 2px solid rgba(255,255,255,0.45);
+            font-size: 13.5px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .btn-outline-white:hover { border-color: #fff; background: rgba(255,255,255,0.1); }
+
+        /* ── FOOTER ── */
+        .footer-top {
+            background: var(--navy-dark);
+            padding: 56px 64px 40px;
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr 1fr;
+            gap: 48px;
+        }
+        .footer-brand .logo-text {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 72;
+            font-size: 18px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 12px;
+            display: block;
+        }
+        .footer-brand p { font-size: 13px; line-height: 1.7; color: rgba(255,255,255,0.6); margin-bottom: 20px; }
+        .footer-brand .contact-info { font-size: 13px; color: rgba(255,255,255,0.75); line-height: 1.9; }
+        .footer-brand .contact-info a { color: rgba(255,255,255,0.75); text-decoration: none; }
+        .footer-brand .contact-info a:hover { color: #fff; }
+        .footer-col h4 { font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 16px; }
+        .footer-col ul { list-style: none; }
+        .footer-col ul li { margin-bottom: 10px; }
+        .footer-col ul a { font-size: 13.5px; color: rgba(255,255,255,0.72); text-decoration: none; transition: color 0.2s; }
+        .footer-col ul a:hover { color: #fff; }
+        .footer-bottom {
+            background: var(--navy-dark);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding: 18px 64px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .footer-bottom p { font-size: 12px; color: rgba(255,255,255,0.4); }
+        .footer-bottom a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 12px; }
+        .footer-bottom a:hover { color: rgba(255,255,255,0.8); }
+
+        /* OBR section needs its own padding since .program-section zeroes it */
+        #obr { padding: 80px 64px !important; }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 1280px) {
+            .prog-split-content { padding: 48px 48px; }
+        }
+        @media (max-width: 1024px) {
+            .prog-split { grid-template-columns: 1fr; min-height: unset; }
+            .prog-split-img { min-height: 380px; order: 1 !important; }
+            .prog-split-content { order: 2 !important; padding: 48px 40px; justify-content: flex-start; }
+            .obr-grid { grid-template-columns: 1fr; }
+            .footer-top { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hamburger { display: flex; }
+            .section { padding: 56px 24px; }
+            #obr { padding: 56px 24px !important; }
+            .prog-split-img { min-height: 300px; }
+            .prog-split-content { padding: 36px 24px; }
+            .obr-responsibility-grid { grid-template-columns: 1fr !important; }
+            .obr-responsibility-grid > div:first-child { border-right: none !important; border-bottom: 1px solid rgba(255,255,255,0.1); }
+            .page-hero { padding: 56px 24px 48px; }
+            .sub-nav { padding: 0 24px; }
+            .main-nav { padding: 0 24px; }
+            .utility-bar { display: none; }
+            .cta-band { padding: 56px 24px; }
+            .footer-top { grid-template-columns: 1fr; padding: 40px 24px; }
+            .footer-bottom { padding: 18px 24px; flex-direction: column; gap: 12px; text-align: center; }
+        }
+        @media (max-width: 480px) {
+            .detail-row { flex-direction: column; gap: 4px; }
+            .detail-value { text-align: left; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+    <a href="index.html#services" onclick="closeMobile()">Services</a>
+    <a href="index.html#markets" onclick="closeMobile()">Markets</a>
+    <a href="index.html#service-area" onclick="closeMobile()">Service Area</a>
+    <a href="index.html#why" onclick="closeMobile()">Why Us</a>
+    <a href="programs.html" onclick="closeMobile()">Programs</a>
+    <a href="about.html" onclick="closeMobile()">About</a>
+    <a href="faq.html" onclick="closeMobile()">FAQ</a>
+    <a href="index.html#contact-form" class="m-cta" onclick="closeMobile()">Free Energy Audit</a>
+</div>
+
+<!-- UTILITY BAR -->
+<div class="utility-bar">
+    <a href="tel:+12016600121">(201) 660-0121</a>
+    <a href="mailto:info@lumensamericallc.com">info@lumensamericallc.com</a>
+    <a href="#">New Jersey &mdash; Statewide</a>
+</div>
+
+<!-- MAIN NAV -->
+<nav class="main-nav" id="mainNav">
+    <a href="index.html" class="nav-logo">
+        <span class="nav-logo-text">Lumens America</span>
+    </a>
+    <ul class="nav-links">
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#markets">Markets</a></li>
+        <li><a href="index.html#service-area">Service Area</a></li>
+        <li><a href="index.html#why">Why Us</a></li>
+        <li><a href="programs.html" class="active">Programs</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="index.html#contact-form" class="nav-cta">Free Energy Audit</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero reveal">
+    <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>›</span>
+        <span style="color:rgba(255,255,255,0.75);">PSE&amp;G Programs</span>
+    </div>
+    <div class="hero-badge">⚡ PSE&amp;G Certified Trade Ally</div>
+    <h1>PSE&amp;G Energy Efficiency<br>Programs & Incentives</h1>
+    <p>Five distinct pathways to lower energy costs — funded and structured by PSE&amp;G. Lumens America navigates the qualification, paperwork, and execution so your upgrade happens faster and costs less out of pocket.</p>
+</div>
+
+<!-- STICKY PROGRAM SUB-NAV -->
+<div class="sub-nav">
+    <div class="sub-nav-inner">
+        <a href="#prescriptive" class="sub-nav-link">Prescriptive</a>
+        <a href="#direct-install" class="sub-nav-link">Direct Install</a>
+        <a href="#engineered-tier2" class="sub-nav-link">Engineered Tier 2</a>
+        <a href="#multifamily" class="sub-nav-link">Multifamily</a>
+        <a href="#engineered-full" class="sub-nav-link">Engineered Solutions</a>
+        <a href="#obr" class="sub-nav-link">OBR Financing</a>
+    </div>
+</div>
+
+<!-- ══════════════════════════════════════════════ -->
+<!-- PROGRAM 1: PRESCRIPTIVE -->
+<!-- ══════════════════════════════════════════════ -->
+<section class="section program-section reveal" id="prescriptive">
+    <div class="prog-split">
+        <div class="prog-split-img">
+            <img src="website%20images/commericial%20office%20prescriptive%20rebates.png" alt="Commercial office after LED retrofit" loading="lazy">
+        </div>
+        <div class="prog-split-content">
+            <span class="section-eyebrow">Program 01</span>
+            <h2 class="prog-split-title">Prescriptive Program</h2>
+            <div class="program-who">Any size commercial or industrial customer</div>
+            <p class="program-desc">Point-of-sale rebates for the most common energy-efficient upgrades. Fastest path to money back — no custom engineering, no post-installation measurement period. Lumens America handles the application so you collect your rebate at time of purchase.</p>
+            <div class="program-highlights">
+                <div class="highlight-item">Rebates issued at point-of-sale — no waiting after project completion</div>
+                <div class="highlight-item">Covers lighting, HVAC, motors, water heaters, refrigeration, and food service</div>
+                <div class="highlight-item">Any demand level qualifies — no kW threshold required</div>
+                <div class="highlight-item">OBR financing available for remaining project costs after rebate</div>
+            </div>
+            <div class="program-details" style="margin-top:28px;">
+                <div class="program-details-header"><h4>Program Snapshot</h4></div>
+                <div class="program-details-body">
+                    <div class="detail-row"><span class="detail-label">Eligibility</span><span class="detail-value">Any PSE&amp;G commercial or industrial customer</span></div>
+                    <div class="detail-row"><span class="detail-label">Incentive Type</span><span class="detail-value">Point-of-sale rebate</span></div>
+                    <div class="detail-row"><span class="detail-label">Financing</span><span class="detail-value">OBR available for balance</span></div>
+                    <div class="detail-row"><span class="detail-label">Timeline</span><span class="detail-value">Fastest of all programs</span></div>
+                    <div class="detail-row"><span class="detail-label">M&amp;V Required</span><span class="detail-value">No — pre-approved equipment</span></div>
+                    <div style="margin-top:16px;"><div class="eq-tags"><span class="eq-tag">LED Lighting</span><span class="eq-tag">HVAC Systems</span><span class="eq-tag">Motors &amp; Drives</span><span class="eq-tag">Water Heaters</span><span class="eq-tag">Refrigeration</span></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════════════ -->
+<!-- PROGRAM 2: DIRECT INSTALL -->
+<!-- ══════════════════════════════════════════════ -->
+<section class="section section-alt program-section reveal" id="direct-install">
+    <div class="prog-split img-right">
+        <div class="prog-split-img">
+            <img src="website%20images/small%20business%20store%20front.png" alt="Small business storefront with LED lighting upgrade" loading="lazy">
+        </div>
+        <div class="prog-split-content">
+            <span class="section-eyebrow">Program 02</span>
+            <h2 class="prog-split-title">Direct Install Program</h2>
+            <div class="program-who">Businesses under 300 kW or 40,000 therms/yr</div>
+            <p class="program-desc">PSE&amp;G's highest-value program for smaller businesses. PSE&amp;G covers 100% of upfront installation costs — you pay nothing at time of installation. A free on-site assessment identifies every eligible improvement before a single dollar is spent.</p>
+            <div class="program-highlights">
+                <div class="highlight-item">$0 out-of-pocket — PSE&amp;G covers all upfront installation costs</div>
+                <div class="highlight-item">Free on-site energy assessment by a certified specialist</div>
+                <div class="highlight-item">Lighting, HVAC controls, smart thermostats, occupancy sensors</div>
+                <div class="highlight-item">Fast turnaround — typically 4–8 weeks from assessment to completion</div>
+            </div>
+            <div class="program-details" style="margin-top:28px;">
+                <div class="program-details-header"><h4>Program Snapshot</h4></div>
+                <div class="program-details-body">
+                    <div class="detail-row"><span class="detail-label">Eligibility</span><span class="detail-value">&lt; 300 kW demand or &lt; 40,000 therms/yr</span></div>
+                    <div class="detail-row"><span class="detail-label">Incentive Type</span><span class="detail-value">100% upfront cost coverage by PSE&amp;G</span></div>
+                    <div class="detail-row"><span class="detail-label">Assessment</span><span class="detail-value">Free on-site evaluation included</span></div>
+                    <div class="detail-row"><span class="detail-label">Out-of-Pocket</span><span class="detail-value">$0 at time of installation</span></div>
+                    <div class="detail-row"><span class="detail-label">Best Fit</span><span class="detail-value">Retail, small commercial, restaurants</span></div>
+                    <div style="margin-top:16px;"><div class="eq-tags"><span class="eq-tag">LED Lighting</span><span class="eq-tag">HVAC Controls</span><span class="eq-tag">Smart Thermostats</span><span class="eq-tag">Occupancy Sensors</span></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════════════ -->
+<!-- PROGRAM 3: ENGINEERED SOLUTIONS TIER 2 -->
+<!-- ══════════════════════════════════════════════ -->
+<section class="section program-section reveal" id="engineered-tier2">
+    <div class="prog-split">
+        <div class="prog-split-img">
+            <img src="website%20images/program%20card%20hvac.png" alt="Commercial HVAC upgrade with custom controls" loading="lazy">
+        </div>
+        <div class="prog-split-content">
+            <span class="section-eyebrow">Program 03</span>
+            <h2 class="prog-split-title">Engineered Solutions — Tier 2</h2>
+            <div class="program-who">Mid-size commercial and industrial facilities</div>
+            <p class="program-desc">Bridges the gap between Prescriptive rebates and full custom engineering. Incentives are based on actual measured savings — not pre-approved equipment lists — ideal for complex or non-standard configurations.</p>
+            <div class="program-highlights">
+                <div class="highlight-item">Custom incentives tied to real post-installation kWh and therm savings</div>
+                <div class="highlight-item">Broader eligibility — equipment not on the Prescriptive list may qualify</div>
+                <div class="highlight-item">Pre-install review required (Lumens America manages this end-to-end)</div>
+                <div class="highlight-item">0% OBR financing for project costs not covered by incentives</div>
+            </div>
+            <div class="program-details" style="margin-top:28px;">
+                <div class="program-details-header"><h4>Program Snapshot</h4></div>
+                <div class="program-details-body">
+                    <div class="detail-row"><span class="detail-label">Eligibility</span><span class="detail-value">Any PSE&amp;G C&amp;I customer not in Direct Install range</span></div>
+                    <div class="detail-row"><span class="detail-label">Incentive Type</span><span class="detail-value">Performance-based (actual savings)</span></div>
+                    <div class="detail-row"><span class="detail-label">Pre-Approval</span><span class="detail-value">Required before installation</span></div>
+                    <div class="detail-row"><span class="detail-label">Financing</span><span class="detail-value">0% OBR for remaining costs</span></div>
+                    <div class="detail-row"><span class="detail-label">M&amp;V</span><span class="detail-value">Post-installation verification</span></div>
+                    <div style="margin-top:16px;"><div class="eq-tags"><span class="eq-tag">Custom HVAC</span><span class="eq-tag">Chillers &amp; Boilers</span><span class="eq-tag">VFDs</span><span class="eq-tag">Controls &amp; BAS</span><span class="eq-tag">LED (non-prescriptive)</span></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════════════ -->
+<!-- PROGRAM 4: MULTIFAMILY -->
+<!-- ══════════════════════════════════════════════ -->
+<section class="section section-alt program-section reveal" id="multifamily">
+    <div class="prog-split img-right">
+        <div class="prog-split-img">
+            <img src="website%20images/multifam.png" alt="Multifamily apartment building at blue hour" loading="lazy">
+        </div>
+        <div class="prog-split-content">
+            <span class="section-eyebrow">Program 04</span>
+            <h2 class="prog-split-title">Multifamily Program</h2>
+            <div class="program-who">Residential buildings with 3+ units</div>
+            <p class="program-desc">Built for apartment buildings, condominiums, senior housing, and mixed-use properties. PSE&amp;G funds efficiency upgrades across the full building — in-unit, common areas, and building systems — with combined rebates and OBR financing.</p>
+            <div class="program-highlights">
+                <div class="highlight-item">Free on-site or virtual energy assessment for qualifying properties</div>
+                <div class="highlight-item">Covers in-unit appliances, HVAC, lighting, insulation, and common areas</div>
+                <div class="highlight-item">OBR repayment on utility bill — often offset fully by energy savings</div>
+                <div class="highlight-item">Eligible types: garden, mid-rise, high-rise, and mixed-use</div>
+            </div>
+            <div class="program-details" style="margin-top:28px;">
+                <div class="program-details-header"><h4>Program Snapshot</h4></div>
+                <div class="program-details-body">
+                    <div class="detail-row"><span class="detail-label">Eligibility</span><span class="detail-value">3+ unit residential or mixed-use</span></div>
+                    <div class="detail-row"><span class="detail-label">Incentive Type</span><span class="detail-value">Rebates + OBR on utility bill</span></div>
+                    <div class="detail-row"><span class="detail-label">Assessment</span><span class="detail-value">Free on-site or virtual</span></div>
+                    <div class="detail-row"><span class="detail-label">Building Types</span><span class="detail-value">Garden, mid-rise, high-rise, mixed-use</span></div>
+                    <div class="detail-row"><span class="detail-label">Bill Impact</span><span class="detail-value">OBR typically offset by savings</span></div>
+                    <div style="margin-top:16px;"><div class="eq-tags"><span class="eq-tag">LED Lighting</span><span class="eq-tag">HVAC Systems</span><span class="eq-tag">In-Unit Appliances</span><span class="eq-tag">Insulation</span><span class="eq-tag">Water Heaters</span></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════════════ -->
+<!-- PROGRAM 5: ENGINEERED SOLUTIONS FULL -->
+<!-- ══════════════════════════════════════════════ -->
+<section class="section program-section reveal" id="engineered-full">
+    <div class="prog-split">
+        <div class="prog-split-img">
+            <img src="website%20images/engineered%20solutinos%20large%20indus%20facility.png" alt="Large industrial facility with high-bay LED lighting" loading="lazy" style="object-position: center 30%;" onerror="this.style.display='none'">
+        </div>
+        <div class="prog-split-content">
+            <span class="section-eyebrow">Program 05</span>
+            <h2 class="prog-split-title">Engineered Solutions — Full Program</h2>
+            <div class="program-who">Large C&amp;I, hospitals, universities, municipalities</div>
+            <p class="program-desc">The full Engineered Solutions Program is PSE&amp;G's most comprehensive offering — and the most lucrative for large facilities. PSE&amp;G covers the cost of an investment-grade energy audit and project design. Custom incentives are calculated on actual verified savings with a 12-month measurement and verification period.</p>
+            <div class="program-highlights">
+                <div class="highlight-item">PSE&amp;G funds an investment-grade audit — typically a $50,000–$150,000 value</div>
+                <div class="highlight-item">PSE&amp;G covers engineering design costs as part of program participation</div>
+                <div class="highlight-item">4-phase process: Audit → Design → Construction → Commissioning</div>
+                <div class="highlight-item">12-month M&amp;V period to verify and maximize incentive calculation</div>
+                <div class="highlight-item">60-month interest-free OBR for remaining project costs</div>
+            </div>
+            <div class="steps-list" style="background:var(--off-white);border-radius:12px;padding:24px 28px;margin-top:24px;">
+                <p style="font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--amber);margin-bottom:14px;">4-Phase Process</p>
+                <div class="step-item" style="gap:12px;">
+                    <div class="step-num" style="background:var(--navy);color:#fff;">1</div>
+                    <div style="font-size:13.5px;color:var(--navy);line-height:1.5;padding-top:3px;"><strong>Investment-Grade Audit</strong> — PSE&amp;G-funded deep dive into your facility's energy profile</div>
+                </div>
+                <div class="step-item" style="gap:12px;margin-top:12px;">
+                    <div class="step-num" style="background:var(--navy);color:#fff;">2</div>
+                    <div style="font-size:13.5px;color:var(--navy);line-height:1.5;padding-top:3px;"><strong>Engineering Design</strong> — Scope and design covered by PSE&amp;G, Lumens America executes</div>
+                </div>
+                <div class="step-item" style="gap:12px;margin-top:12px;">
+                    <div class="step-num" style="background:var(--navy);color:#fff;">3</div>
+                    <div style="font-size:13.5px;color:var(--navy);line-height:1.5;padding-top:3px;"><strong>Construction</strong> — Installation of approved scope with full project management</div>
+                </div>
+                <div class="step-item" style="gap:12px;margin-top:12px;">
+                    <div class="step-num" style="background:var(--navy);color:#fff;">4</div>
+                    <div style="font-size:13.5px;color:var(--navy);line-height:1.5;padding-top:3px;"><strong>Commissioning &amp; M&amp;V</strong> — 12-month verification period finalizes your incentive amount</div>
+                </div>
+            </div>
+            <div class="program-details" style="margin-top:28px;">
+                <div class="program-details-header">
+                    <h4>Program Snapshot</h4>
+                </div>
+                <div class="program-details-body">
+                    <div class="detail-row">
+                        <span class="detail-label">Eligibility</span>
+                        <span class="detail-value">Large C&amp;I, healthcare, education, government</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Audit</span>
+                        <span class="detail-value">Investment-grade, PSE&amp;G-funded</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Design Costs</span>
+                        <span class="detail-value">Covered by PSE&amp;G</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Incentive Type</span>
+                        <span class="detail-value">Performance-based, post-M&amp;V</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">OBR Term</span>
+                        <span class="detail-value">60 months, 0% interest</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">M&amp;V Period</span>
+                        <span class="detail-value">12 months post-installation</span>
+                    </div>
+                    <div style="margin-top:20px;">
+                        <p style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:10px;">Common Facility Types</p>
+                        <div class="eq-tags">
+                            <span class="eq-tag">Hospitals</span>
+                            <span class="eq-tag">Universities</span>
+                            <span class="eq-tag">Municipalities</span>
+                            <span class="eq-tag">Large Industrial</span>
+                            <span class="eq-tag">Distribution Centers</span>
+                            <span class="eq-tag">Hotels</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════════════ -->
+<!-- OBR SECTION -->
+<!-- ══════════════════════════════════════════════ -->
+<section class="section section-navy program-section reveal" id="obr">
+    <span class="section-eyebrow-light">Financing</span>
+    <h2 class="section-heading-light">On-Bill Repayment (OBR)</h2>
+    <p class="section-sub-light">OBR is PSE&amp;G's zero-interest financing mechanism — project costs are added to your monthly utility bill and typically offset by the energy savings the upgrade generates. No banks. No credit checks. No collateral.</p>
+
+    <div class="obr-grid">
+        <!-- LEFT: 9-step application process -->
+        <div>
+            <p style="font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:20px;">How OBR Works — Step by Step</p>
+            <div class="obr-steps">
+                <div class="obr-step">
+                    <div class="obr-step-num">1</div>
+                    <div class="obr-step-content">
+                        <h5>Free Energy Assessment</h5>
+                        <p>Lumens America performs a no-cost on-site audit to identify eligible improvements and estimate your savings potential.</p>
+                    </div>
+                </div>
+                <div class="obr-step">
+                    <div class="obr-step-num">2</div>
+                    <div class="obr-step-content">
+                        <h5>Program Selection</h5>
+                        <p>We identify which PSE&amp;G program(s) your facility qualifies for and structure the project accordingly.</p>
+                    </div>
+                </div>
+                <div class="obr-step">
+                    <div class="obr-step-num">3</div>
+                    <div class="obr-step-content">
+                        <h5>Application Submission</h5>
+                        <p>Lumens America submits the OBR application and supporting documentation to PSE&amp;G on your behalf.</p>
+                    </div>
+                </div>
+                <div class="obr-step">
+                    <div class="obr-step-num">4</div>
+                    <div class="obr-step-content">
+                        <h5>PSE&amp;G Review &amp; Approval</h5>
+                        <p>PSE&amp;G reviews the application, verifies eligibility, and issues a formal loan commitment letter.</p>
+                    </div>
+                </div>
+                <div class="obr-step">
+                    <div class="obr-step-num">5</div>
+                    <div class="obr-step-content">
+                        <h5>Customer Agreement Signed</h5>
+                        <p>You sign the OBR agreement. Repayment terms, monthly amount, and schedule are locked in writing.</p>
+                    </div>
+                </div>
+                <div class="obr-step">
+                    <div class="obr-step-num">6</div>
+                    <div class="obr-step-content">
+                        <h5>Installation Begins</h5>
+                        <p>Lumens America proceeds with the approved installation scope. All work is inspected and documented.</p>
+                    </div>
+                </div>
+                <div class="obr-step">
+                    <div class="obr-step-num">7</div>
+                    <div class="obr-step-content">
+                        <h5>PSE&amp;G Inspection</h5>
+                        <p>PSE&amp;G inspects the completed installation to confirm scope and quality before releasing funds.</p>
+                    </div>
+                </div>
+                <div class="obr-step">
+                    <div class="obr-step-num">8</div>
+                    <div class="obr-step-content">
+                        <h5>Funds Released to Contractor</h5>
+                        <p>PSE&amp;G sends the check directly to Lumens America. You owe nothing upfront — repayment starts on your next bill.</p>
+                    </div>
+                </div>
+                <div class="obr-step">
+                    <div class="obr-step-num">9</div>
+                    <div class="obr-step-content">
+                        <h5>Monthly On-Bill Repayment</h5>
+                        <p>The OBR charge appears on your PSE&amp;G bill for up to 60 months. In most cases, your energy savings offset the repayment amount — or exceed it.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT: OBR FAQ -->
+        <div>
+            <p style="font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:20px;">Key OBR Questions</p>
+            <div class="obr-faqs">
+                <div class="obr-faq-item">
+                    <h5>Is there interest on the OBR loan?</h5>
+                    <p>No. OBR is a 0% interest financing mechanism provided by PSE&amp;G. The full amount you borrow is the full amount you repay — no fees, no interest, no early repayment penalty.</p>
+                </div>
+                <div class="obr-faq-item">
+                    <h5>What if I move or sell the property?</h5>
+                    <p>The OBR obligation is tied to the utility account at the service address, not to you personally. If you sell or move, the agreement can be transferred to the new account holder. Lumens America walks you through this process at time of sale.</p>
+                </div>
+                <div class="obr-faq-item">
+                    <h5>Can I pay it off early?</h5>
+                    <p>Yes. PSE&amp;G allows early repayment of the OBR balance at any time. There are no prepayment penalties. Many customers choose to pay off the balance following a property refinance or sale.</p>
+                </div>
+                <div class="obr-faq-item">
+                    <h5>Who receives the PSE&amp;G check?</h5>
+                    <p>PSE&amp;G issues the OBR funds directly to the contractor (Lumens America) upon passing the post-installation inspection. The customer never handles the money — the project is fully funded and executed before repayment begins.</p>
+                </div>
+                <div class="obr-faq-item">
+                    <h5>How much can I borrow?</h5>
+                    <p>OBR limits are set by PSE&amp;G based on program and project scope. For the full Engineered Solutions program, OBR terms extend to 60 months. Lumens America structures every project to maximize the incentive/OBR combination so out-of-pocket exposure is minimized.</p>
+                </div>
+            </div>
+            <div class="obr-callout">
+                <p><strong>Bottom line:</strong> In most projects, the monthly OBR repayment is equal to or less than the energy savings generated by the upgrade. That means the project pays for itself — and often puts money back in your pocket from day one.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Customer Responsibilities -->
+    <div class="obr-responsibility-grid" style="margin-top:56px;display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,0.12);">
+        <!-- Left: We Handle -->
+        <div style="background:rgba(255,255,255,0.06);padding:32px 36px;border-right:1px solid rgba(255,255,255,0.1);">
+            <p style="font-size:10.5px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:16px;">Your Trade Ally Handles</p>
+            <div style="display:flex;flex-direction:column;gap:12px;">
+                <div style="display:flex;align-items:center;gap:12px;">
+                    <span style="flex-shrink:0;width:20px;height:20px;background:rgba(201,151,58,0.15);border:1px solid rgba(201,151,58,0.4);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--amber);font-weight:700;">✓</span>
+                    <span style="font-size:14px;color:rgba(255,255,255,0.82);line-height:1.5;">All paperwork and PSE&amp;G applications</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:12px;">
+                    <span style="flex-shrink:0;width:20px;height:20px;background:rgba(201,151,58,0.15);border:1px solid rgba(201,151,58,0.4);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--amber);font-weight:700;">✓</span>
+                    <span style="font-size:14px;color:rgba(255,255,255,0.82);line-height:1.5;">Equipment compliance (DLC / ENERGY STAR verification)</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:12px;">
+                    <span style="flex-shrink:0;width:20px;height:20px;background:rgba(201,151,58,0.15);border:1px solid rgba(201,151,58,0.4);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--amber);font-weight:700;">✓</span>
+                    <span style="font-size:14px;color:rgba(255,255,255,0.82);line-height:1.5;">Application submission, tracking &amp; follow-up</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:12px;">
+                    <span style="flex-shrink:0;width:20px;height:20px;background:rgba(201,151,58,0.15);border:1px solid rgba(201,151,58,0.4);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--amber);font-weight:700;">✓</span>
+                    <span style="font-size:14px;color:rgba(255,255,255,0.82);line-height:1.5;">Pre- and post-installation PSE&amp;G inspections</span>
+                </div>
+            </div>
+        </div>
+        <!-- Right: You Do -->
+        <div style="background:rgba(255,255,255,0.04);padding:32px 36px;">
+            <p style="font-size:10.5px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:16px;">Your Responsibilities — That's It</p>
+            <div style="display:flex;flex-direction:column;gap:12px;">
+                <div style="display:flex;align-items:center;gap:12px;">
+                    <span style="flex-shrink:0;width:20px;height:20px;background:var(--amber-bg);border:1px solid rgba(201,151,58,0.3);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:11px;color:var(--amber);font-weight:700;">1</span>
+                    <span style="font-size:14px;color:rgba(255,255,255,0.82);line-height:1.5;">Sign the application and approval forms</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:12px;">
+                    <span style="flex-shrink:0;width:20px;height:20px;background:var(--amber-bg);border:1px solid rgba(201,151,58,0.3);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:11px;color:var(--amber);font-weight:700;">2</span>
+                    <span style="font-size:14px;color:rgba(255,255,255,0.82);line-height:1.5;">Provide a recent utility bill</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:12px;">
+                    <span style="flex-shrink:0;width:20px;height:20px;background:var(--amber-bg);border:1px solid rgba(201,151,58,0.3);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:11px;color:var(--amber);font-weight:700;">3</span>
+                    <span style="font-size:14px;color:rgba(255,255,255,0.82);line-height:1.5;">Allow access for pre/post inspections</span>
+                </div>
+            </div>
+            <p style="font-size:12.5px;color:rgba(255,255,255,0.45);margin-top:20px;line-height:1.65;font-style:italic;">Most customers are surprised by how little they have to do. That's the point.</p>
+        </div>
+    </div>
+
+
+</section>
+
+<!-- CTA BAND -->
+<div class="cta-band reveal">
+    <h2>Not sure which program fits you?</h2>
+    <p>Our team has navigated every PSE&amp;G program for hundreds of NJ facilities. A free energy assessment takes 45 minutes and tells you exactly where you stand.</p>
+    <div class="cta-buttons">
+        <a href="index.html#contact-form" class="btn-white">Get a Free Assessment →</a>
+        <a href="faq.html" class="btn-outline-white">Read the FAQ</a>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer-top" id="contact">
+    <div class="footer-brand">
+        <img src="logo.png.png" alt="Lumens America" class="footer-logo-img">
+        <p>New Jersey's trusted, full-service energy partner for LED lighting, HVAC, and solar upgrades. PSE&amp;G Certified Trade Ally since day one.</p>
+        <div class="contact-info">
+            <a href="tel:+12016600121">(201) 660-0121</a><br>
+            <a href="mailto:info@lumensamericallc.com">info@lumensamericallc.com</a><br>
+            New Jersey — Statewide Coverage
+        </div>
+    </div>
+    <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+            <li><a href="index.html#services">LED Lighting</a></li>
+            <li><a href="index.html#services">LED Retrofit</a></li>
+            <li><a href="index.html#services">HVAC Upgrades</a></li>
+            <li><a href="index.html#services">Solar Installation</a></li>
+            <li><a href="index.html#contact-form">Energy Audit</a></li>
+        </ul>
+    </div>
+    <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="programs.html">PSE&amp;G Programs</a></li>
+            <li><a href="about.html#award">Awards &amp; Recognition</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="index.html#contact-form">Contact</a></li>
+        </ul>
+    </div>
+    <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+            <li><a href="programs.html">PSE&amp;G Rebate Programs</a></li>
+            <li><a href="programs.html#obr">OBR Financing</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="index.html#contact-form">Free Energy Audit</a></li>
+        </ul>
+    </div>
+</div>
+<div class="footer-bottom">
+    <p>&copy; 2026 Lumens America LLC. All rights reserved.</p>
+    <div style="display:flex;gap:20px;"><a href="mailto:info@lumensamericallc.com">Contact</a></div>
+</div>
+
+<script>
+    // Transparent → white nav on scroll
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); }, { passive: true });
+
+    // Highlight active sub-nav pill on scroll
+    const sections = document.querySelectorAll('.program-section');
+    const links = document.querySelectorAll('.sub-nav-link');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                links.forEach(l => l.classList.remove('active'));
+                const match = document.querySelector(`.sub-nav-link[href="#${e.target.id}"]`);
+                if (match) match.classList.add('active');
+            }
+        });
+    }, { rootMargin: '-130px 0px -40% 0px' });
+    sections.forEach(s => observer.observe(s));
+    // Set first program link active on initial load
+    if (links.length) links[0].classList.add('active');
+
+    // Hamburger + mobile menu
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    function closeMobile() { hamburger.classList.remove('open'); mobileMenu.classList.remove('open'); document.body.style.overflow=''; }
+    hamburger.addEventListener('click', () => { hamburger.classList.toggle('open'); mobileMenu.classList.toggle('open'); document.body.style.overflow = mobileMenu.classList.contains('open')?'hidden':''; });
+
+    // Scroll reveal
+    const revealObs = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');revealObs.unobserve(e.target);} }); }, {threshold:0.12});
+    document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+</script>
+
+</body>
+</html>
